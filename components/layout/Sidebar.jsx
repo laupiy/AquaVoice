@@ -1,99 +1,59 @@
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import {
-  LayoutDashboard,
-  MapPinned,
-  ClipboardList,
-  BellRing,
-  FileText,
-  User,
-  Waves,
-  X,
-} from 'lucide-react';
+import { USER_NAV_ITEMS, ADMIN_NAV_ITEMS } from '@/lib/constants';
 
-const navItems = [
-  { href: '/dashboard', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/water-map', label: 'Water Map', icon: MapPinned },
-  { href: '/report', label: 'AquaVoice Report', icon: ClipboardList },
-  { href: '/alerts', label: 'Alerts', icon: BellRing },
-  { href: '/my-reports', label: 'My Reports', icon: FileText },
-  { href: '/profile', label: 'Profile', icon: User },
-];
-
-export default function Sidebar({ open, onClose }) {
+export default function Sidebar({ role = 'USER' }) {
   const pathname = usePathname();
+  const navItems = role === 'ADMIN' ? ADMIN_NAV_ITEMS : USER_NAV_ITEMS;
 
   return (
-    <>
-      {open && (
-        <button
-          aria-label="Tutup menu"
-          onClick={onClose}
-          className="fixed inset-0 z-30 bg-abyss-950/50 backdrop-blur-sm lg:hidden"
-        />
-      )}
-
-      <aside
-        className={`fixed z-40 inset-y-0 left-0 w-72 shrink-0 bg-abyss-950 text-mist-100 flex flex-col
-          transform transition-transform duration-300 lg:static lg:translate-x-0
-          ${open ? 'translate-x-0' : '-translate-x-full'}`}
-      >
-        <div className="flex items-center justify-between px-6 h-20 border-b border-abyss-800">
-          <Link href="/dashboard" className="flex items-center gap-3">
-            <span className="relative grid place-items-center w-10 h-10 rounded-2xl bg-current-500/15 text-current-300">
-              <span className="ripple absolute text-current-400/60" />
-              <Waves size={20} strokeWidth={2.2} />
-            </span>
-            <div className="leading-tight">
-              <p className="font-display font-extrabold text-lg tracking-tight text-white">
-                Aqua<span className="text-current-400">Voice</span>
-              </p>
-              <p className="text-[11px] text-mist-100/50">User Portal</p>
-            </div>
-          </Link>
-          <button
-            onClick={onClose}
-            className="lg:hidden text-mist-100/60 hover:text-white"
-            aria-label="Tutup menu"
-          >
-            <X size={20} />
-          </button>
+    <aside className="w-64 bg-white/70 backdrop-blur-md border-r border-slate-200/80 min-h-[calc(100vh-4rem)] p-4 hidden md:flex flex-col justify-between">
+      <div className="space-y-6">
+        {/* Header Indicator Role */}
+        <div className="px-3 py-2 rounded-xl bg-slate-100/80 border border-slate-200/60">
+          <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+            Akses Navigasi
+          </p>
+          <p className="text-xs font-bold text-slate-800 flex items-center gap-1.5 mt-0.5">
+            <span className={`w-2 h-2 rounded-full ${role === 'ADMIN' ? 'bg-amber-500' : 'bg-cyan-500'}`} />
+            {role === 'ADMIN' ? 'Administrator System' : 'Warga / Nelayan Pesisir'}
+          </p>
         </div>
 
-        <nav className="flex-1 overflow-y-auto px-4 py-6 space-y-1">
-          <p className="px-3 mb-2 text-[11px] font-semibold uppercase tracking-wider text-mist-100/35">
-            Menu Utama
-          </p>
-          {navItems.map(({ href, label, icon: Icon }) => {
-            const isActive = pathname === href || pathname.startsWith(`${href}/`);
+        {/* Navigation List */}
+        <nav className="space-y-1">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
             return (
               <Link
-                key={href}
-                href={href}
-                onClick={onClose}
-                className={`group flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors
-                  ${
-                    isActive
-                      ? 'bg-current-500/15 text-current-300'
-                      : 'text-mist-100/65 hover:bg-abyss-900 hover:text-mist-100'
-                  }`}
+                key={item.href}
+                href={item.href}
+                className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all ${
+                  isActive
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-md shadow-cyan-500/20 font-semibold'
+                    : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                }`}
               >
-                <Icon size={18} strokeWidth={2} />
-                <span>{label}</span>
+                <span>{item.name}</span>
               </Link>
             );
           })}
         </nav>
+      </div>
 
-        <div className="p-4 mx-4 mb-5 rounded-2xl bg-abyss-900 border border-abyss-800">
-          <p className="text-xs font-semibold text-current-300">Quick Voice Report</p>
-          <p className="mt-1 text-[13px] text-mist-100/60">
-            Laporkan pencemaran air dengan suara langsung dari dashboard.
-          </p>
+      {/* Footer Info Card */}
+      <div className="card-base p-3 bg-gradient-to-br from-cyan-50 to-blue-50/50 border-cyan-100">
+        <div className="flex items-center gap-2">
+          <span className="text-base">🌊</span>
+          <div>
+            <p className="text-xs font-bold text-slate-800">AquaVoice v1.0</p>
+            <p className="text-[10px] text-slate-500">Smart Water Mitigation System</p>
+          </div>
         </div>
-      </aside>
-    </>
+      </div>
+    </aside>
   );
 }
