@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  name      String
+  email     String   @unique
+  phone     String
+  password  String
+  avatar    String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  reports   Report[]
+}
+
+model MonitoringStation {
+  id          String         @id
+  name        String
+  river       String
+  lat         Float
+  lng         Float
+  status      String
+  wqi         Float
+  lastUpdated DateTime
+  ph          Float
+  temperature Float
+  dissolvedOxygen Float
+  turbidity   Float
+  trendData   String
+  sensors     Sensor[]
+  alerts      Alert[]
+}
+
+model Sensor {
+  id        String            @id
+  stationId String
+  type      String
+  status    String
+  station   MonitoringStation @relation(fields: [stationId], references: [id], onDelete: Cascade)
+}
+
+model Alert {
+  id          String            @id
+  stationId   String
+  stationName String
+  level       String
+  parameter   String
+  message     String
+  timestamp   DateTime
+  status      String
+  station     MonitoringStation @relation(fields: [stationId], references: [id], onDelete: Cascade)
+}
+
+model Report {
+  id           String   @id @default(cuid())
+  reportNumber String   @unique
+  userId       String
+  title        String
+  category     String
+  description  String
+  photoUrl     String?
+  videoUrl     String?
+  voiceNote    String?
+  latitude     Float?
+  longitude    Float?
+  location     String?
+  status       String   @default("menunggu_verifikasi")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model AppStat {
+  id                Int @id @default(1)
+  monitoringStations Int
+  activeSensors     Int
+  communityReports  Int
+  activeUsers       Int
+}
