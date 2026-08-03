@@ -1,0 +1,52 @@
+[
+  {
+    "id": "RPT-231",
+    "reporter": "Warga - Kel. Batujajar Timur",
+    "location": "Sungai Citarum - Batujajar",
+    "category": "Limbah Industri",
+    "description": "Air sungai berwarna kehitaman dan berbau menyengat sejak pagi hari, diduga dari pabrik tekstil di hulu.",
+    "status": "diverifikasi",
+    "timestamp": "2026-08-03T06:30:00+07:00",
+    "upvotes": 24
+  },
+  {
+    "id": "RPT-229",
+    "reporter": "Warga - Kel. Dago",
+    "location": "Sungai Cikapundung - Dago",
+    "category": "Sampah",
+    "description": "Tumpukan sampah plastik menyumbat aliran di bawah jembatan dekat kampus.",
+    "status": "diproses",
+    "timestamp": "2026-08-02T16:10:00+07:00",
+    "upvotes": 11
+  },
+  {
+    "id": "RPT-227",
+    "reporter": "Warga - Kec. Cilengkrang",
+    "location": "Waduk Saguling",
+    "category": "Perubahan Warna Air",
+    "description": "Air waduk terlihat lebih keruh dari biasanya setelah hujan deras dua hari terakhir.",
+    "status": "diproses",
+    "timestamp": "2026-08-02T09:45:00+07:00",
+    "upvotes": 8
+  },
+  {
+    "id": "RPT-224",
+    "reporter": "Warga - Kec. Pangalengan",
+    "location": "Situ Cileunca",
+    "category": "Bau Tidak Sedap",
+    "description": "Muncul bau amis yang cukup kuat di area dekat dermaga wisata.",
+    "status": "selesai",
+    "timestamp": "2026-08-01T14:20:00+07:00",
+    "upvotes": 5
+  },
+  {
+    "id": "RPT-221",
+    "reporter": "Warga - Kel. Bojongsoang",
+    "location": "Sungai Cikapundung - Bojongsoang",
+    "category": "Ikan Mati",
+    "description": "Ditemukan beberapa ikan mati mengambang, namun jumlahnya tidak banyak.",
+    "status": "selesai",
+    "timestamp": "2026-07-31T11:00:00+07:00",
+    "upvotes": 9
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "MTG-08",
+    "stationId": "STN-02",
+    "station": "Sungai Citarum - Batujajar",
+    "issue": "pH rendah & oksigen terlarut kritis",
+    "severity": "critical",
+    "recommendation": "Hentikan sementara penggunaan air untuk irigasi di segmen ini dan lakukan penelusuran sumber limbah ke arah hulu industri.",
+    "steps": [
+      "Kirim tim lapangan untuk sampling manual dalam 2 jam",
+      "Notifikasi dinas lingkungan hidup setempat",
+      "Pasang tanda peringatan di titik akses air terdekat",
+      "Pantau tren pH & DO setiap 30 menit hingga stabil"
+    ],
+    "status": "sedang berjalan",
+    "assignedTo": "Tim Respons Cepat Wilayah Barat"
+  },
+  {
+    "id": "MTG-07",
+    "stationId": "STN-03",
+    "station": "Waduk Saguling",
+    "issue": "Kekeruhan meningkat pasca hujan",
+    "severity": "warning",
+    "recommendation": "Tingkatkan frekuensi pengurasan sedimen di inlet waduk dan koordinasi dengan pengelola bendungan terkait debit air.",
+    "steps": [
+      "Cek laporan curah hujan 48 jam terakhir",
+      "Jadwalkan flushing sedimen di titik inlet",
+      "Update status ke publik melalui Pusat Peringatan"
+    ],
+    "status": "menunggu tindak lanjut",
+    "assignedTo": "Tim Pengelola Waduk Saguling"
+  },
+  {
+    "id": "MTG-06",
+    "stationId": "STN-05",
+    "station": "Situ Cileunca",
+    "issue": "Amonia mendekati ambang batas",
+    "severity": "warning",
+    "recommendation": "Edukasi kelompok tani sekitar situ terkait dosis pupuk dan buat zona penyangga vegetasi di tepi situ.",
+    "steps": [
+      "Jadwalkan sosialisasi ke kelompok tani",
+      "Ajukan penanaman vegetasi penyangga",
+      "Pantau kadar amonia mingguan"
+    ],
+    "status": "direncanakan",
+    "assignedTo": "Tim Penyuluhan Lingkungan"
+  },
+  {
+    "id": "MTG-05",
+    "stationId": "STN-01",
+    "station": "Sungai Cikapundung - Dago",
+    "issue": "Sampah plastik menyumbat aliran",
+    "severity": "info",
+    "recommendation": "Koordinasi dengan komunitas peduli sungai untuk kerja bakti mingguan di titik rawan sampah.",
+    "steps": [
+      "Jadwalkan kerja bakti bersama komunitas",
+      "Pasang jaring penyaring sampah sementara"
+    ],
+    "status": "selesai",
+    "assignedTo": "Komunitas Cikapundung Bersih"
+  }
+]

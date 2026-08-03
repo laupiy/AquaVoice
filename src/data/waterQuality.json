@@ -1,0 +1,137 @@
+{
+  "stations": [
+    {
+      "id": "STN-01",
+      "name": "Sungai Cikapundung - Dago",
+      "river": "Cikapundung",
+      "lat": -6.8619,
+      "lng": 107.6136,
+      "status": "safe",
+      "lastUpdated": "2026-08-03T07:45:00+07:00",
+      "current": {
+        "ph": 7.1,
+        "turbidity": 12.4,
+        "tds": 185,
+        "temperature": 24.8,
+        "dissolvedOxygen": 6.8,
+        "ammonia": 0.12
+      },
+      "trend": [
+        { "time": "06:00", "ph": 7.0, "turbidity": 10.1, "tds": 178, "do": 6.9 },
+        { "time": "09:00", "ph": 7.1, "turbidity": 11.6, "tds": 180, "do": 6.8 },
+        { "time": "12:00", "ph": 7.2, "turbidity": 13.0, "tds": 183, "do": 6.7 },
+        { "time": "15:00", "ph": 7.1, "turbidity": 12.9, "tds": 185, "do": 6.8 },
+        { "time": "18:00", "ph": 7.0, "turbidity": 12.4, "tds": 185, "do": 6.9 },
+        { "time": "21:00", "ph": 7.1, "turbidity": 12.4, "tds": 185, "do": 6.8 }
+      ]
+    },
+    {
+      "id": "STN-02",
+      "name": "Sungai Citarum - Batujajar",
+      "river": "Citarum",
+      "lat": -6.8419,
+      "lng": 107.5215,
+      "status": "critical",
+      "lastUpdated": "2026-08-03T07:40:00+07:00",
+      "current": {
+        "ph": 5.4,
+        "turbidity": 88.7,
+        "tds": 612,
+        "temperature": 27.9,
+        "dissolvedOxygen": 2.9,
+        "ammonia": 1.85
+      },
+      "trend": [
+        { "time": "06:00", "ph": 5.9, "turbidity": 70.2, "tds": 560, "do": 3.6 },
+        { "time": "09:00", "ph": 5.7, "turbidity": 76.5, "tds": 580, "do": 3.3 },
+        { "time": "12:00", "ph": 5.6, "turbidity": 82.1, "tds": 598, "do": 3.1 },
+        { "time": "15:00", "ph": 5.5, "turbidity": 85.4, "tds": 605, "do": 3.0 },
+        { "time": "18:00", "ph": 5.4, "turbidity": 88.7, "tds": 612, "do": 2.9 },
+        { "time": "21:00", "ph": 5.4, "turbidity": 89.0, "tds": 615, "do": 2.8 }
+      ]
+    },
+    {
+      "id": "STN-03",
+      "name": "Waduk Saguling",
+      "river": "Citarum (waduk)",
+      "lat": -6.8871,
+      "lng": 107.4092,
+      "status": "warning",
+      "lastUpdated": "2026-08-03T07:38:00+07:00",
+      "current": {
+        "ph": 6.4,
+        "turbidity": 42.3,
+        "tds": 340,
+        "temperature": 26.5,
+        "dissolvedOxygen": 4.5,
+        "ammonia": 0.68
+      },
+      "trend": [
+        { "time": "06:00", "ph": 6.6, "turbidity": 35.0, "tds": 320, "do": 4.9 },
+        { "time": "09:00", "ph": 6.5, "turbidity": 38.4, "tds": 328, "do": 4.8 },
+        { "time": "12:00", "ph": 6.5, "turbidity": 40.1, "tds": 334, "do": 4.6 },
+        { "time": "15:00", "ph": 6.4, "turbidity": 41.6, "tds": 337, "do": 4.5 },
+        { "time": "18:00", "ph": 6.4, "turbidity": 42.3, "tds": 340, "do": 4.5 },
+        { "time": "21:00", "ph": 6.3, "turbidity": 43.0, "tds": 342, "do": 4.4 }
+      ]
+    },
+    {
+      "id": "STN-04",
+      "name": "Sungai Cikapundung - Bojongsoang",
+      "river": "Cikapundung",
+      "lat": -6.9721,
+      "lng": 107.6389,
+      "status": "safe",
+      "lastUpdated": "2026-08-03T07:42:00+07:00",
+      "current": {
+        "ph": 7.3,
+        "turbidity": 9.8,
+        "tds": 160,
+        "temperature": 25.1,
+        "dissolvedOxygen": 7.1,
+        "ammonia": 0.09
+      },
+      "trend": [
+        { "time": "06:00", "ph": 7.2, "turbidity": 9.0, "tds": 155, "do": 7.2 },
+        { "time": "09:00", "ph": 7.3, "turbidity": 9.4, "tds": 158, "do": 7.1 },
+        { "time": "12:00", "ph": 7.3, "turbidity": 9.9, "tds": 160, "do": 7.0 },
+        { "time": "15:00", "ph": 7.3, "turbidity": 9.9, "tds": 161, "do": 7.1 },
+        { "time": "18:00", "ph": 7.3, "turbidity": 9.8, "tds": 160, "do": 7.1 },
+        { "time": "21:00", "ph": 7.2, "turbidity": 9.7, "tds": 159, "do": 7.2 }
+      ]
+    },
+    {
+      "id": "STN-05",
+      "name": "Situ Cileunca",
+      "river": "Danau/Situ",
+      "lat": -7.1591,
+      "lng": 107.5342,
+      "status": "warning",
+      "lastUpdated": "2026-08-03T07:36:00+07:00",
+      "current": {
+        "ph": 6.7,
+        "turbidity": 30.5,
+        "tds": 270,
+        "temperature": 22.4,
+        "dissolvedOxygen": 5.2,
+        "ammonia": 0.44
+      },
+      "trend": [
+        { "time": "06:00", "ph": 6.8, "turbidity": 27.1, "tds": 260, "do": 5.5 },
+        { "time": "09:00", "ph": 6.8, "turbidity": 28.4, "tds": 264, "do": 5.4 },
+        { "time": "12:00", "ph": 6.7, "turbidity": 29.6, "tds": 267, "do": 5.3 },
+        { "time": "15:00", "ph": 6.7, "turbidity": 30.2, "tds": 269, "do": 5.2 },
+        { "time": "18:00", "ph": 6.7, "turbidity": 30.5, "tds": 270, "do": 5.2 },
+        { "time": "21:00", "ph": 6.6, "turbidity": 31.0, "tds": 272, "do": 5.1 }
+      ]
+    }
+  ],
+  "parameterInfo": {
+    "ph": { "label": "pH", "unit": "", "safeRange": [6.5, 8.5] },
+    "turbidity": { "label": "Kekeruhan", "unit": "NTU", "safeRange": [0, 25] },
+    "tds": { "label": "TDS", "unit": "mg/L", "safeRange": [0, 400] },
+    "temperature": { "label": "Suhu", "unit": "°C", "safeRange": [20, 30] },
+    "dissolvedOxygen": { "label": "Oksigen Terlarut", "unit": "mg/L", "safeRange": [5, 10] },
+    "ammonia": { "label": "Amonia", "unit": "mg/L", "safeRange": [0, 0.5] }
+  }
+}

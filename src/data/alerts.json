@@ -1,0 +1,62 @@
+[
+  {
+    "id": "ALR-1042",
+    "stationId": "STN-02",
+    "station": "Sungai Citarum - Batujajar",
+    "level": "critical",
+    "parameter": "Oksigen Terlarut",
+    "message": "Oksigen terlarut turun ke 2.9 mg/L, jauh di bawah ambang aman 5 mg/L. Indikasi kuat pencemaran organik berat.",
+    "timestamp": "2026-08-03T07:40:00+07:00",
+    "status": "belum ditangani"
+  },
+  {
+    "id": "ALR-1041",
+    "stationId": "STN-02",
+    "station": "Sungai Citarum - Batujajar",
+    "level": "critical",
+    "parameter": "pH",
+    "message": "pH air turun ke 5.4, terindikasi limbah asam dari kawasan industri di hulu.",
+    "timestamp": "2026-08-03T06:15:00+07:00",
+    "status": "sedang ditangani"
+  },
+  {
+    "id": "ALR-1039",
+    "stationId": "STN-03",
+    "station": "Waduk Saguling",
+    "level": "warning",
+    "parameter": "Kekeruhan",
+    "message": "Kekeruhan naik ke 42.3 NTU akibat sedimentasi pasca hujan deras semalam.",
+    "timestamp": "2026-08-03T05:50:00+07:00",
+    "status": "belum ditangani"
+  },
+  {
+    "id": "ALR-1035",
+    "stationId": "STN-05",
+    "station": "Situ Cileunca",
+    "level": "warning",
+    "parameter": "Amonia",
+    "message": "Kadar amonia mendekati ambang batas, kemungkinan dari limbah pertanian sekitar situ.",
+    "timestamp": "2026-08-02T19:20:00+07:00",
+    "status": "terpantau"
+  },
+  {
+    "id": "ALR-1028",
+    "stationId": "STN-01",
+    "station": "Sungai Cikapundung - Dago",
+    "level": "info",
+    "parameter": "Suhu",
+    "message": "Suhu air sedikit meningkat mengikuti cuaca cerah, masih dalam rentang aman.",
+    "timestamp": "2026-08-02T13:05:00+07:00",
+    "status": "selesai"
+  },
+  {
+    "id": "ALR-1022",
+    "stationId": "STN-04",
+    "station": "Sungai Cikapundung - Bojongsoang",
+    "level": "info",
+    "parameter": "TDS",
+    "message": "Seluruh parameter stabil dalam 24 jam terakhir.",
+    "timestamp": "2026-08-02T08:00:00+07:00",
+    "status": "selesai"
+  }
+]
