@@ -1,0 +1,34 @@
+.leaflet-container {
+  font-family: 'Inter', sans-serif;
+  background: #eaf2f4;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 1rem;
+  padding: 0;
+  box-shadow: 0 12px 32px -14px rgba(7, 27, 43, 0.35);
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  min-width: 230px;
+}
+
+.leaflet-popup-tip {
+  box-shadow: 0 4px 8px -2px rgba(7, 27, 43, 0.15);
+}
+
+.leaflet-control-zoom {
+  border-radius: 0.75rem !important;
+  overflow: hidden;
+  border: 1px solid #dce8ec !important;
+}
+
+.leaflet-control-zoom a {
+  color: #071b2b !important;
+}
+
+.leaflet-control-attribution {
+  border-radius: 0.5rem 0 0 0;
+  font-size: 10px;
+}

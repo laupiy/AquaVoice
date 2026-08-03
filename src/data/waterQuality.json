@@ -14,15 +14,64 @@
         "tds": 185,
         "temperature": 24.8,
         "dissolvedOxygen": 6.8,
-        "ammonia": 0.12
+        "ammonia": 0.12,
+        "salinity": 0.18
       },
       "trend": [
-        { "time": "06:00", "ph": 7.0, "turbidity": 10.1, "tds": 178, "do": 6.9 },
-        { "time": "09:00", "ph": 7.1, "turbidity": 11.6, "tds": 180, "do": 6.8 },
-        { "time": "12:00", "ph": 7.2, "turbidity": 13.0, "tds": 183, "do": 6.7 },
-        { "time": "15:00", "ph": 7.1, "turbidity": 12.9, "tds": 185, "do": 6.8 },
-        { "time": "18:00", "ph": 7.0, "turbidity": 12.4, "tds": 185, "do": 6.9 },
-        { "time": "21:00", "ph": 7.1, "turbidity": 12.4, "tds": 185, "do": 6.8 }
+        {
+          "time": "06:00",
+          "ph": 7,
+          "turbidity": 10.1,
+          "tds": 178,
+          "do": 6.9,
+          "salinity": 0.16,
+          "temperature": 24.2
+        },
+        {
+          "time": "09:00",
+          "ph": 7.1,
+          "turbidity": 11.6,
+          "tds": 180,
+          "do": 6.8,
+          "salinity": 0.17,
+          "temperature": 24.5
+        },
+        {
+          "time": "12:00",
+          "ph": 7.2,
+          "turbidity": 13,
+          "tds": 183,
+          "do": 6.7,
+          "salinity": 0.18,
+          "temperature": 24.9
+        },
+        {
+          "time": "15:00",
+          "ph": 7.1,
+          "turbidity": 12.9,
+          "tds": 185,
+          "do": 6.8,
+          "salinity": 0.19,
+          "temperature": 25.2
+        },
+        {
+          "time": "18:00",
+          "ph": 7,
+          "turbidity": 12.4,
+          "tds": 185,
+          "do": 6.9,
+          "salinity": 0.2,
+          "temperature": 25
+        },
+        {
+          "time": "21:00",
+          "ph": 7.1,
+          "turbidity": 12.4,
+          "tds": 185,
+          "do": 6.8,
+          "salinity": 0.21,
+          "temperature": 24.7
+        }
       ]
     },
     {
@@ -39,15 +88,64 @@
         "tds": 612,
         "temperature": 27.9,
         "dissolvedOxygen": 2.9,
-        "ammonia": 1.85
+        "ammonia": 1.85,
+        "salinity": 0.62
       },
       "trend": [
-        { "time": "06:00", "ph": 5.9, "turbidity": 70.2, "tds": 560, "do": 3.6 },
-        { "time": "09:00", "ph": 5.7, "turbidity": 76.5, "tds": 580, "do": 3.3 },
-        { "time": "12:00", "ph": 5.6, "turbidity": 82.1, "tds": 598, "do": 3.1 },
-        { "time": "15:00", "ph": 5.5, "turbidity": 85.4, "tds": 605, "do": 3.0 },
-        { "time": "18:00", "ph": 5.4, "turbidity": 88.7, "tds": 612, "do": 2.9 },
-        { "time": "21:00", "ph": 5.4, "turbidity": 89.0, "tds": 615, "do": 2.8 }
+        {
+          "time": "06:00",
+          "ph": 5.9,
+          "turbidity": 70.2,
+          "tds": 560,
+          "do": 3.6,
+          "salinity": 0.6,
+          "temperature": 27.3
+        },
+        {
+          "time": "09:00",
+          "ph": 5.7,
+          "turbidity": 76.5,
+          "tds": 580,
+          "do": 3.3,
+          "salinity": 0.61,
+          "temperature": 27.6
+        },
+        {
+          "time": "12:00",
+          "ph": 5.6,
+          "turbidity": 82.1,
+          "tds": 598,
+          "do": 3.1,
+          "salinity": 0.62,
+          "temperature": 28
+        },
+        {
+          "time": "15:00",
+          "ph": 5.5,
+          "turbidity": 85.4,
+          "tds": 605,
+          "do": 3,
+          "salinity": 0.63,
+          "temperature": 28.3
+        },
+        {
+          "time": "18:00",
+          "ph": 5.4,
+          "turbidity": 88.7,
+          "tds": 612,
+          "do": 2.9,
+          "salinity": 0.64,
+          "temperature": 28.1
+        },
+        {
+          "time": "21:00",
+          "ph": 5.4,
+          "turbidity": 89,
+          "tds": 615,
+          "do": 2.8,
+          "salinity": 0.65,
+          "temperature": 27.8
+        }
       ]
     },
     {
@@ -64,15 +162,64 @@
         "tds": 340,
         "temperature": 26.5,
         "dissolvedOxygen": 4.5,
-        "ammonia": 0.68
+        "ammonia": 0.68,
+        "salinity": 0.35
       },
       "trend": [
-        { "time": "06:00", "ph": 6.6, "turbidity": 35.0, "tds": 320, "do": 4.9 },
-        { "time": "09:00", "ph": 6.5, "turbidity": 38.4, "tds": 328, "do": 4.8 },
-        { "time": "12:00", "ph": 6.5, "turbidity": 40.1, "tds": 334, "do": 4.6 },
-        { "time": "15:00", "ph": 6.4, "turbidity": 41.6, "tds": 337, "do": 4.5 },
-        { "time": "18:00", "ph": 6.4, "turbidity": 42.3, "tds": 340, "do": 4.5 },
-        { "time": "21:00", "ph": 6.3, "turbidity": 43.0, "tds": 342, "do": 4.4 }
+        {
+          "time": "06:00",
+          "ph": 6.6,
+          "turbidity": 35,
+          "tds": 320,
+          "do": 4.9,
+          "salinity": 0.33,
+          "temperature": 25.9
+        },
+        {
+          "time": "09:00",
+          "ph": 6.5,
+          "turbidity": 38.4,
+          "tds": 328,
+          "do": 4.8,
+          "salinity": 0.34,
+          "temperature": 26.2
+        },
+        {
+          "time": "12:00",
+          "ph": 6.5,
+          "turbidity": 40.1,
+          "tds": 334,
+          "do": 4.6,
+          "salinity": 0.35,
+          "temperature": 26.6
+        },
+        {
+          "time": "15:00",
+          "ph": 6.4,
+          "turbidity": 41.6,
+          "tds": 337,
+          "do": 4.5,
+          "salinity": 0.36,
+          "temperature": 26.9
+        },
+        {
+          "time": "18:00",
+          "ph": 6.4,
+          "turbidity": 42.3,
+          "tds": 340,
+          "do": 4.5,
+          "salinity": 0.37,
+          "temperature": 26.7
+        },
+        {
+          "time": "21:00",
+          "ph": 6.3,
+          "turbidity": 43,
+          "tds": 342,
+          "do": 4.4,
+          "salinity": 0.38,
+          "temperature": 26.4
+        }
       ]
     },
     {
@@ -89,15 +236,64 @@
         "tds": 160,
         "temperature": 25.1,
         "dissolvedOxygen": 7.1,
-        "ammonia": 0.09
+        "ammonia": 0.09,
+        "salinity": 0.16
       },
       "trend": [
-        { "time": "06:00", "ph": 7.2, "turbidity": 9.0, "tds": 155, "do": 7.2 },
-        { "time": "09:00", "ph": 7.3, "turbidity": 9.4, "tds": 158, "do": 7.1 },
-        { "time": "12:00", "ph": 7.3, "turbidity": 9.9, "tds": 160, "do": 7.0 },
-        { "time": "15:00", "ph": 7.3, "turbidity": 9.9, "tds": 161, "do": 7.1 },
-        { "time": "18:00", "ph": 7.3, "turbidity": 9.8, "tds": 160, "do": 7.1 },
-        { "time": "21:00", "ph": 7.2, "turbidity": 9.7, "tds": 159, "do": 7.2 }
+        {
+          "time": "06:00",
+          "ph": 7.2,
+          "turbidity": 9,
+          "tds": 155,
+          "do": 7.2,
+          "salinity": 0.14,
+          "temperature": 24.5
+        },
+        {
+          "time": "09:00",
+          "ph": 7.3,
+          "turbidity": 9.4,
+          "tds": 158,
+          "do": 7.1,
+          "salinity": 0.15,
+          "temperature": 24.8
+        },
+        {
+          "time": "12:00",
+          "ph": 7.3,
+          "turbidity": 9.9,
+          "tds": 160,
+          "do": 7,
+          "salinity": 0.16,
+          "temperature": 25.2
+        },
+        {
+          "time": "15:00",
+          "ph": 7.3,
+          "turbidity": 9.9,
+          "tds": 161,
+          "do": 7.1,
+          "salinity": 0.17,
+          "temperature": 25.5
+        },
+        {
+          "time": "18:00",
+          "ph": 7.3,
+          "turbidity": 9.8,
+          "tds": 160,
+          "do": 7.1,
+          "salinity": 0.18,
+          "temperature": 25.3
+        },
+        {
+          "time": "21:00",
+          "ph": 7.2,
+          "turbidity": 9.7,
+          "tds": 159,
+          "do": 7.2,
+          "salinity": 0.19,
+          "temperature": 25
+        }
       ]
     },
     {
@@ -114,24 +310,123 @@
         "tds": 270,
         "temperature": 22.4,
         "dissolvedOxygen": 5.2,
-        "ammonia": 0.44
+        "ammonia": 0.44,
+        "salinity": 0.28
       },
       "trend": [
-        { "time": "06:00", "ph": 6.8, "turbidity": 27.1, "tds": 260, "do": 5.5 },
-        { "time": "09:00", "ph": 6.8, "turbidity": 28.4, "tds": 264, "do": 5.4 },
-        { "time": "12:00", "ph": 6.7, "turbidity": 29.6, "tds": 267, "do": 5.3 },
-        { "time": "15:00", "ph": 6.7, "turbidity": 30.2, "tds": 269, "do": 5.2 },
-        { "time": "18:00", "ph": 6.7, "turbidity": 30.5, "tds": 270, "do": 5.2 },
-        { "time": "21:00", "ph": 6.6, "turbidity": 31.0, "tds": 272, "do": 5.1 }
+        {
+          "time": "06:00",
+          "ph": 6.8,
+          "turbidity": 27.1,
+          "tds": 260,
+          "do": 5.5,
+          "salinity": 0.26,
+          "temperature": 21.8
+        },
+        {
+          "time": "09:00",
+          "ph": 6.8,
+          "turbidity": 28.4,
+          "tds": 264,
+          "do": 5.4,
+          "salinity": 0.27,
+          "temperature": 22.1
+        },
+        {
+          "time": "12:00",
+          "ph": 6.7,
+          "turbidity": 29.6,
+          "tds": 267,
+          "do": 5.3,
+          "salinity": 0.28,
+          "temperature": 22.5
+        },
+        {
+          "time": "15:00",
+          "ph": 6.7,
+          "turbidity": 30.2,
+          "tds": 269,
+          "do": 5.2,
+          "salinity": 0.29,
+          "temperature": 22.8
+        },
+        {
+          "time": "18:00",
+          "ph": 6.7,
+          "turbidity": 30.5,
+          "tds": 270,
+          "do": 5.2,
+          "salinity": 0.3,
+          "temperature": 22.6
+        },
+        {
+          "time": "21:00",
+          "ph": 6.6,
+          "turbidity": 31,
+          "tds": 272,
+          "do": 5.1,
+          "salinity": 0.31,
+          "temperature": 22.3
+        }
       ]
     }
   ],
   "parameterInfo": {
-    "ph": { "label": "pH", "unit": "", "safeRange": [6.5, 8.5] },
-    "turbidity": { "label": "Kekeruhan", "unit": "NTU", "safeRange": [0, 25] },
-    "tds": { "label": "TDS", "unit": "mg/L", "safeRange": [0, 400] },
-    "temperature": { "label": "Suhu", "unit": "°C", "safeRange": [20, 30] },
-    "dissolvedOxygen": { "label": "Oksigen Terlarut", "unit": "mg/L", "safeRange": [5, 10] },
-    "ammonia": { "label": "Amonia", "unit": "mg/L", "safeRange": [0, 0.5] }
+    "ph": {
+      "label": "pH",
+      "unit": "",
+      "safeRange": [
+        6.5,
+        8.5
+      ]
+    },
+    "turbidity": {
+      "label": "Kekeruhan",
+      "unit": "NTU",
+      "safeRange": [
+        0,
+        25
+      ]
+    },
+    "tds": {
+      "label": "TDS",
+      "unit": "mg/L",
+      "safeRange": [
+        0,
+        400
+      ]
+    },
+    "temperature": {
+      "label": "Suhu",
+      "unit": "°C",
+      "safeRange": [
+        20,
+        30
+      ]
+    },
+    "dissolvedOxygen": {
+      "label": "Oksigen Terlarut",
+      "unit": "mg/L",
+      "safeRange": [
+        5,
+        10
+      ]
+    },
+    "ammonia": {
+      "label": "Amonia",
+      "unit": "mg/L",
+      "safeRange": [
+        0,
+        0.5
+      ]
+    },
+    "salinity": {
+      "label": "Salinitas",
+      "unit": "ppt",
+      "safeRange": [
+        0,
+        0.5
+      ]
+    }
   }
 }
