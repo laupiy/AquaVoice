@@ -1,32 +1,39 @@
 {
   "name": "aquavoice",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "setup": "prisma generate && prisma migrate deploy && prisma db seed",
+    "db:seed": "node prisma/seed.js",
+    "db:migrate": "prisma migrate dev",
+    "postinstall": "prisma generate"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
+    "@prisma/client": "^6.5.0",
+    "bcryptjs": "^3.0.2",
+    "framer-motion": "^12.6.3",
     "leaflet": "^1.9.4",
-    "lucide-react": "^1.28.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
+    "lucide-react": "^0.487.0",
+    "next": "^15.2.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.55.0",
     "react-leaflet": "^5.0.0",
-    "react-router-dom": "^7.18.2",
-    "recharts": "^3.10.1"
+    "recharts": "^2.15.1",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@tailwindcss/vite": "^4.3.3",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.4",
-    "autoprefixer": "^10.5.4",
-    "oxlint": "^1.75.0",
-    "postcss": "^8.5.25",
-    "tailwindcss": "^4.3.3",
-    "vite": "^8.2.0"
+    "@tailwindcss/postcss": "^4.0.17",
+    "postcss": "^8.5.3",
+    "prisma": "^6.5.0",
+    "tailwindcss": "^4.0.17"
   }
 }
