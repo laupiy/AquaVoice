@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap');
 @import "tailwindcss";
 
+/* ==========================================================================
+   1. TAILWIND V4 THEME CONFIGURATION (AquaVoice Design System)
+   ========================================================================== */
 @theme {
   --font-display: 'Manrope', 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -33,10 +36,20 @@
   --color-critical: #E11D48;
 }
 
+/* ==========================================================================
+   2. BASE STYLES & TYPOGRAPHY
+   ========================================================================== */
+:root {
+  --background: 210 40% 98%;
+  --foreground: 222.2 84% 4.9%;
+}
+
 body {
   font-family: var(--font-body);
   background-color: var(--color-mist-50);
   color: var(--color-slate-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .font-display {
@@ -47,21 +60,111 @@ body {
   font-family: var(--font-mono);
 }
 
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--color-abyss-700);
-  border-radius: 999px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
+/* ==========================================================================
+   3. CUSTOM COMPONENTS & UI SYSTEM (Harmonized with Oceanic Palette)
+   ========================================================================== */
+
+/* Glassmorphism Cards */
+.card-base {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  border: 1px solid var(--color-mist-200);
+  box-shadow: 0 4px 12px -2px rgba(11, 42, 66, 0.04);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.card-interactive {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  border: 1px solid var(--color-mist-200);
+  box-shadow: 0 4px 12px -2px rgba(11, 42, 66, 0.04);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.card-interactive:hover {
+  border-color: var(--color-flow-400);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -4px rgba(14, 165, 233, 0.12);
+}
+
+/* Status Badges */
+.badge-safe {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  background-color: var(--color-current-100);
+  color: var(--color-current-600);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+}
+
+.badge-warning {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  background-color: #FEF3C7;
+  color: #B45309;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-danger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  background-color: #FFE4E6;
+  color: #BE123C;
+  border: 1px solid rgba(225, 29, 72, 0.3);
+}
+
+/* Custom Input Fields */
+.input-base {
+  width: 100%;
+  padding: 0.625rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-mist-200);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 0.875rem;
+  color: var(--color-slate-ink);
+  transition: all 0.2s ease-in-out;
+}
+
+.input-base:focus {
+  background-color: #ffffff;
+  outline: none;
+  border-color: var(--color-current-500);
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+}
+
+/* ==========================================================================
+   4. ANIMATIONS & EFFECTS
+   ========================================================================== */
+
+/* Ripple Animation */
 @keyframes ripple-out {
   0% { transform: scale(0.8); opacity: 0.35; }
   100% { transform: scale(2.4); opacity: 0; }
+}
+.ripple {
+  position: relative;
 }
 .ripple::before {
   content: '';
@@ -72,6 +175,7 @@ body {
   animation: ripple-out 2.8s ease-out infinite;
 }
 
+/* Wave Drift Animations */
 @keyframes wave-drift {
   0%, 100% { transform: translateX(0) translateY(0); }
   50% { transform: translateX(-3%) translateY(4px); }
@@ -79,6 +183,7 @@ body {
 .animate-wave-a { animation: wave-drift 9s ease-in-out infinite; }
 .animate-wave-b { animation: wave-drift 12s ease-in-out infinite reverse; }
 
+/* Dash Flow Line Animation */
 @keyframes dash-flow {
   to { stroke-dashoffset: -24; }
 }
@@ -87,6 +192,7 @@ body {
   animation: dash-flow 4s linear infinite;
 }
 
+/* Floating Y-Axis Animation */
 @keyframes float-y {
   0%, 100% { transform: translateY(0) rotate(-2deg); }
   50% { transform: translateY(-8px) rotate(-1deg); }
@@ -95,9 +201,30 @@ body {
   animation: float-y 5s ease-in-out infinite;
 }
 
+/* ==========================================================================
+   5. THIRD PARTY & UTILITY OVERRIDES
+   ========================================================================== */
+
+/* Leaflet Interactive Map Container */
 .leaflet-container {
   width: 100%;
   height: 100%;
   border-radius: 1rem;
   z-index: 0;
+}
+
+/* Sleek Ocean Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-abyss-700);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-abyss-400);
 }
