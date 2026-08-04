@@ -66,11 +66,27 @@ export default function ReportForm() {
           videoUrl: videoName || null,
         }),
       });
-      const result = await res.json();
-      if (!res.ok) throw new Error(result.error || 'Gagal mengirim laporan');
+
+      let result = null;
+      try {
+        result = await res.json();
+      } catch {
+        throw new Error('Server memberikan respons yang tidak valid. Coba lagi.');
+      }
+
+      if (!res.ok) {
+        const message = result?.error || 'Gagal mengirim laporan';
+        throw new Error(result?.detail ? `${message} (${result.detail})` : message);
+      }
+
       router.push(`/report/success?number=${result.reportNumber}`);
     } catch (err) {
-      setError(err.message);
+      const isNetworkFailure = err instanceof TypeError;
+      setError(
+        isNetworkFailure
+          ? 'Tidak dapat terhubung ke server. Pastikan server berjalan lalu coba lagi.'
+          : err.message
+      );
     } finally {
       setLoading(false);
     }

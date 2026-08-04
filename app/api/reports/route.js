@@ -3,6 +3,7 @@ import prisma from '@/lib/prisma';
 import { getSessionUser } from '@/lib/auth';
 import { reportSchema } from '@/lib/validations';
 import { generateReportNumber } from '@/utils/helpers';
+import { apiError } from '@/lib/apiError';
 
 export async function POST(request) {
   try {
@@ -43,6 +44,6 @@ export async function POST(request) {
 
     return NextResponse.json({ reportNumber: report.reportNumber, id: report.id });
   } catch (error) {
-    return NextResponse.json({ error: 'Terjadi kesalahan server' }, { status: 500 });
+    return apiError('reports', error);
   }
 }

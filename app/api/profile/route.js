@@ -1,7 +1,9 @@
 import { NextResponse } from 'next/server';
+import bcrypt from 'bcryptjs';
 import prisma from '@/lib/prisma';
 import { getSessionUser } from '@/lib/auth';
-import { profileSchema } from '@/lib/validations';
+import { passwordSchema } from '@/lib/validations';
+import { apiError } from '@/lib/apiError';
 
 export async function PUT(request) {
   try {
@@ -11,7 +13,7 @@ export async function PUT(request) {
     }
 
     const body = await request.json();
-    const parsed = profileSchema.safeParse(body);
+    const parsed = passwordSchema.safeParse(body);
 
     if (!parsed.success) {
       return NextResponse.json(
@@ -20,24 +22,21 @@ export async function PUT(request) {
       );
     }
 
-    const emailTaken = await prisma.user.findFirst({
-      where: {
-        email: parsed.data.email,
-        id: { not: user.id },
-      },
-    });
+    const dbUser = await prisma.user.findUnique({ where: { id: user.id } });
+    const valid = await bcrypt.compare(parsed.data.currentPassword, dbUser.password);
 
-    if (emailTaken) {
-      return NextResponse.json({ error: 'Email sudah digunakan' }, { status: 409 });
+    if (!valid) {
+      return NextResponse.json({ error: 'Password saat ini salah' }, { status: 401 });
     }
 
+    const hashedPassword = await bcrypt.hash(parsed.data.newPassword, 10);
     await prisma.user.update({
       where: { id: user.id },
-      data: parsed.data,
+      data: { password: hashedPassword },
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    return NextResponse.json({ error: 'Terjadi kesalahan server' }, { status: 500 });
+    return apiError('profile/password', error);
   }
 }

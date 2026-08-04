@@ -94,12 +94,26 @@ export default function QuickVoiceReport() {
         }),
       });
 
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Gagal mengirim laporan');
+      let data = null;
+      try {
+        data = await res.json();
+      } catch {
+        throw new Error('Server memberikan respons yang tidak valid. Coba lagi.');
+      }
+
+      if (!res.ok) {
+        const message = data?.error || 'Gagal mengirim laporan';
+        throw new Error(data?.detail ? `${message} (${data.detail})` : message);
+      }
 
       router.push(`/report/success?number=${data.reportNumber}`);
     } catch (err) {
-      setError(err.message);
+      const isNetworkFailure = err instanceof TypeError;
+      setError(
+        isNetworkFailure
+          ? 'Tidak dapat terhubung ke server. Pastikan server berjalan lalu coba lagi.'
+          : err.message
+      );
     } finally {
       setLoading(false);
     }

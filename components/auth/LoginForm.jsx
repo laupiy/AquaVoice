@@ -51,12 +51,33 @@ export default function LoginForm() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      const result = await res.json();
-      if (!res.ok) throw new Error(result.error || 'Login gagal');
+
+      // Parse the response defensively: if the server crashed or returned
+      // something that isn't JSON (e.g. a raw error page), don't let a
+      // JSON.parse failure surface as a confusing generic message.
+      let result = null;
+      try {
+        result = await res.json();
+      } catch {
+        throw new Error('Server memberikan respons yang tidak valid. Coba lagi.');
+      }
+
+      if (!res.ok) {
+        const message = result?.error || 'Login gagal';
+        throw new Error(result?.detail ? `${message} (${result.detail})` : message);
+      }
+
       router.push('/dashboard');
       router.refresh();
     } catch (err) {
-      setError(err.message);
+      // A TypeError here (fetch() itself rejecting) means the request never
+      // reached the server at all — e.g. the dev server isn't running.
+      const isNetworkFailure = err instanceof TypeError;
+      setError(
+        isNetworkFailure
+          ? 'Tidak dapat terhubung ke server. Pastikan server berjalan lalu coba lagi.'
+          : err.message
+      );
     } finally {
       setLoading(false);
     }

@@ -36,13 +36,29 @@ export default function ProfileView({ user, stats }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      const result = await res.json();
-      if (!res.ok) throw new Error(result.error);
+
+      let result = null;
+      try {
+        result = await res.json();
+      } catch {
+        throw new Error('Server memberikan respons yang tidak valid. Coba lagi.');
+      }
+
+      if (!res.ok) {
+        const message = result?.error || 'Gagal memperbarui profil';
+        throw new Error(result?.detail ? `${message} (${result.detail})` : message);
+      }
+
       setMessage('Profil berhasil diperbarui');
       setEditMode(false);
       router.refresh();
     } catch (err) {
-      setError(err.message);
+      const isNetworkFailure = err instanceof TypeError;
+      setError(
+        isNetworkFailure
+          ? 'Tidak dapat terhubung ke server. Pastikan server berjalan lalu coba lagi.'
+          : err.message
+      );
     } finally {
       setLoading(false);
     }
@@ -57,20 +73,40 @@ export default function ProfileView({ user, stats }) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      const result = await res.json();
-      if (!res.ok) throw new Error(result.error);
+
+      let result = null;
+      try {
+        result = await res.json();
+      } catch {
+        throw new Error('Server memberikan respons yang tidak valid. Coba lagi.');
+      }
+
+      if (!res.ok) {
+        const message = result?.error || 'Gagal mengubah password';
+        throw new Error(result?.detail ? `${message} (${result.detail})` : message);
+      }
+
       setMessage('Password berhasil diubah');
       setPasswordMode(false);
       passwordForm.reset();
     } catch (err) {
-      setError(err.message);
+      const isNetworkFailure = err instanceof TypeError;
+      setError(
+        isNetworkFailure
+          ? 'Tidak dapat terhubung ke server. Pastikan server berjalan lalu coba lagi.'
+          : err.message
+      );
     } finally {
       setLoading(false);
     }
   }
 
   async function handleLogout() {
-    await fetch('/api/auth/logout', { method: 'POST' });
+    try {
+      await fetch('/api/auth/logout', { method: 'POST' });
+    } catch {
+      // Even if the network call fails, still clear the client-side view.
+    }
     router.push('/');
     router.refresh();
   }

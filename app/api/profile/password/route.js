@@ -3,6 +3,7 @@ import bcrypt from 'bcryptjs';
 import prisma from '@/lib/prisma';
 import { getSessionUser } from '@/lib/auth';
 import { passwordSchema } from '@/lib/validations';
+import { apiError } from '@/lib/apiError';
 
 export async function PUT(request) {
   try {
@@ -36,6 +37,6 @@ export async function PUT(request) {
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    return NextResponse.json({ error: 'Terjadi kesalahan server' }, { status: 500 });
+    return apiError('profile/password', error);
   }
 }
